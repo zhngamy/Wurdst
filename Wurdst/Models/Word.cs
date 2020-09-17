@@ -17,5 +17,7 @@ namespace Wurdst.Models
 
         public DateTime? WhenCreated { get; set; }
 
+        public ICollection<WordTag> WordTags { get; set; }
+
     }
 }

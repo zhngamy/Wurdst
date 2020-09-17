@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace Wurdst.Models
 {
     public class Tag
@@ -12,6 +14,8 @@ namespace Wurdst.Models
         public string TagName { get; set; }
 
         public DateTime? WhenCreated { get; set; }
+
+        public ICollection<WordTag> WordTags { get; set; }
 
     }
 }
