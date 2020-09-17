@@ -9,7 +9,7 @@ using Wurdst.Data;
 namespace Wurdst.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200917083429_CreateWordModel")]
+    [Migration("20200917175059_CreateWordModel")]
     partial class CreateWordModel
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -220,13 +220,13 @@ namespace Wurdst.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<DateTime>("DateCreated")
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("Definition")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("SentenceUsage")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime?>("WhenCreated")
                         .HasColumnType("TEXT");
 
                     b.HasKey("WordId");

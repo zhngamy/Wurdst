@@ -15,7 +15,7 @@ namespace Wurdst.Models
 
         public string SentenceUsage { get; set; }
 
-        public DateTime DateCreated { get; set; }
+        public DateTime? WhenCreated { get; set; }
 
     }
 }
