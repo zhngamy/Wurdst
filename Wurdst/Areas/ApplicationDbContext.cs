@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Wurdst.Models;
 
 namespace Wurdst.Data
 {
@@ -12,5 +13,7 @@ namespace Wurdst.Data
             : base(options)
         {
         }
+
+        public DbSet<Word> Words { get; set; }
     }
 }
