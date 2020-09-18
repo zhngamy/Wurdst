@@ -64,7 +64,7 @@ namespace Wurdst
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Dictionary}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
         }
