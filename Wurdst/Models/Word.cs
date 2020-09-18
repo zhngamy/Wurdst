@@ -11,6 +11,8 @@ namespace Wurdst.Models
 
         public int WordId { get; set; }
 
+        public string WordName { get; set; }
+
         public string Definition { get; set; }
 
         public string SentenceUsage { get; set; }

@@ -19,6 +19,7 @@ namespace Wurdst.Controllers
 
             Word word = new Word()
             {
+                WordName = "Superfluous",
                 Definition = "Example definition",
                 SentenceUsage = "Example sentence",
                 WhenCreated = now
