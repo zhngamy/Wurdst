@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Dictionary";
+}
+
+@model Wurdst.Models.ViewModels.DictionaryIndexViewModel 
+
+@*<div class="text-center">
+    <h1 class="display-4">This will be my new </h1>
+</div>*@
+
+<table class="table">
+    <thead>
+        <tr>
+            <th> Word </th>
+            <th> Definition </th>
+            <th> Sentence Example </th>
+            <th> Tags </th>
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr>
+            <td>  </td>
+            <td> @Model.Word.Definition </td>
+            <td> @Model.Word.SentenceUsage </td>
+            <td> @Model.Tag.TagName </td>
+        </tr>
+    </tbody>
+
+</table>
