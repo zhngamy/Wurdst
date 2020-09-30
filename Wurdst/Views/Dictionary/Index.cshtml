@@ -4,27 +4,86 @@
 
 @model Wurdst.Models.ViewModels.DictionaryIndexViewModel 
 
-@*<div class="text-center">
-    <h1 class="display-4">This will be my new </h1>
-</div>*@
 
-<table class="table">
-    <thead>
-        <tr>
-            <th> Word </th>
-            <th> Definition </th>
-            <th> Sentence Example </th>
-            <th> Tags </th>
-        </tr>
+<!DOCTYPE html>
 
-    </thead>
-    <tbody>
-        <tr>
-            <td> @Model.Word.WordName </td>
-            <td> @Model.Word.Definition </td>
-            <td> @Model.Word.SentenceUsage </td>
-            <td> @Model.Tag.TagName </td>
-        </tr>
-    </tbody>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+</head>
 
-</table>
+<body>
+
+    <table id="wordtable_id" class="table">
+        <thead>
+            <tr>
+                <th> Word </th>
+                <th> Definition </th>
+                <th> Sentence Example </th>
+                <th> Tags </th>
+                <th> Action </th>
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr>
+                <td class="editable"> @Model.Word.WordName </td>
+                <td> @Model.Word.Definition </td>
+                <td> @Model.Word.SentenceUsage </td>
+                <td> @Model.Tag.TagName </td>
+                <td>
+                    <div class="btn-group" role="group" aria-label="Button group with edit mode">
+                        <button type="button" class="editbtn btn btn-dark" data-toggle="modal" data-target="#EditDict"> Edit </button>
+                        <button type="button" class="deletebtn btn btn-danger" data-toggle="modal" data-target="#DeleteDict"> <i class="fas fa-times"></i> </button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div id="EditDict" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Word</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form role="form" method="POST" action="">
+                        <input type="hidden" name="_token" value="">
+                        <div class="form-group">
+                            <label class="control-label">Word Name</label>
+                            <div>
+                                <input type="text" class="form-control input-lg" name="wordname" value="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Definition</label>
+                            <div>
+                                <input type="text" class="form-control input-lg" name="worddefinition">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Sentence Example</label>
+                            <div>
+                                <input type="text" class="form-control input-lg" name="wordsentence">
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+

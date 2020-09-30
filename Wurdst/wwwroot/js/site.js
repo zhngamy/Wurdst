@@ -4,5 +4,33 @@
 // Write your JavaScript code.
 
 $(document).ready(function () {
-    $('#wordtable_id').DataTable();
+    $('#wordtable_id').DataTable({
+        paging: false,
+        info: false
+    });
+
+
+
+
+
+
+    //detect click on form
+    //jquery change input into text input
+    // ajax call to send data to server
+    // server responds with updated data & ajax success fcn updates table w data from DB 
+
+
+    $('#wordtable_id').on('click', '.editbtn', function (e) {
+
+        
+    });
+
+
+    //$('').on('click', 'tbody', function (e) {
+
+        
+    //    //editor.inline(this);
+
+    //});
+
 });
